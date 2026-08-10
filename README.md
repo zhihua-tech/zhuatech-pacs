@@ -102,3 +102,6 @@ curl -u admin:admin123 -H 'Content-Type: application/json' \
 
 关键词：知华科技 PACS、医学影像系统、影像科运营管理、PACS 协同平台、Java 影像系统、Spring Boot PACS、Vue 医疗管理系统、上海软件定制开发。
 
+## 影像工作列表优先级
+
+新增 `POST /api/pacs/insights/worklist-priority`，结合急诊、危急发现、造影剂反应、住院状态及报告 SLA 对影像检查排序，输出 `ROUTINE`、`URGENT` 或 `STAT`。
