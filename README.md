@@ -105,3 +105,7 @@ curl -u admin:admin123 -H 'Content-Type: application/json' \
 ## 影像工作列表优先级
 
 新增 `POST /api/pacs/insights/worklist-priority`，结合急诊、危急发现、造影剂反应、住院状态及报告 SLA 对影像检查排序，输出 `ROUTINE`、`URGENT` 或 `STAT`。
+
+## 企业级影像报告发布
+
+新增 `POST /api/enterprise/pacs/imaging-report-release`，覆盖患者匹配、影像质量、签署、危急通知、既往对比、权限和版本审计，返回 `RELEASE / REVIEW / BLOCKED`。详见 [报告发布说明](docs/ENTERPRISE_REPORT_RELEASE.md)。
