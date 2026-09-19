@@ -6,8 +6,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class ImagingReportReleaseService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Assessment assess(Request request) {
         List<String> blockers = new ArrayList<>();
         List<String> actions = new ArrayList<>();
@@ -33,11 +39,20 @@ public class ImagingReportReleaseService {
         return new Assessment(Decision.RELEASE, blockers, actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String examId, boolean patientAndOrderMatched, boolean imagesComplete,
                           boolean imageQualityPassed, boolean radiologistSigned, boolean criticalFinding,
                           boolean criticalFindingNotified, boolean notificationAcknowledged,
                           boolean priorStudiesCompared, boolean contrastEventDocumented,
                           boolean distributionAclApplied, boolean addendumLinkReady) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Assessment(Decision decision, List<String> blockers, List<String> actions) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public enum Decision { RELEASE, REVIEW, BLOCKED }
 }
